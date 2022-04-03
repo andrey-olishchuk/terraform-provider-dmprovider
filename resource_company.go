@@ -61,6 +61,24 @@ func resourceCompanyRead(d *schema.ResourceData, m interface{}) error {
 }
 
 func resourceCompanyUpdate(d *schema.ResourceData, m interface{}) error {
+	resourceID := d.Id()
+	title := d.Get("title").(string)
+
+	url := "https://api-nesebar.dorpm.sbs/api/rest/company/update"
+
+	postBody, _ := json.Marshal(map[string]string{"id": resourceID, "title": title})
+
+	responseBody := bytes.NewBuffer(postBody)
+
+	//Leverage Go's HTTP Post function to make request
+	resp, err := http.Post(url, "application/json", responseBody)
+
+	//Handle Error
+	if err != nil {
+		log.Fatalf("An Error Occured %v", err)
+	}
+	defer resp.Body.Close()
+
 	return resourceCompanyRead(d, m)
 }
 
