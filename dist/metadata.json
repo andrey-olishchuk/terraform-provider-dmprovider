@@ -1,1 +1,1 @@
-{"project_name":"terraform-provider-dmprovider","tag":"v0.0.3","previous_tag":"v0.0.2","version":"0.0.3","commit":"5e53dc94b389488ffc2016267064a03b31f9d6af","date":"2022-04-03T11:54:54.013251+02:00","runtime":{"goos":"darwin","goarch":"arm64"}}
+{"project_name":"terraform-provider-dmprovider","tag":"v0.0.4","previous_tag":"v0.0.3","version":"0.0.4","commit":"7ebeeebacf00de94548bad11c90eeabf2214d5ba","date":"2022-04-03T12:24:38.328684+02:00","runtime":{"goos":"darwin","goarch":"arm64"}}
